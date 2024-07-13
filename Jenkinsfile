@@ -11,17 +11,19 @@ pipeline {
                 }
             }
         }
-        stage('CredScanning') {
-            steps {
-                script {
-                    frontend.CredScanning()
-                }
-            }
-        }
+    
         stage('Sonarqube') {
             steps {
                 script {
                     attendance.callsonarqube()
+                }
+            }
+        }
+        
+        stage('CredScanning') {
+            steps {
+                script {
+                    frontend.CredScanning()
                 }
             }
         }
