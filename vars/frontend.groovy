@@ -8,6 +8,9 @@ def checkoutgit(String gitUrl, String branch = 'main') {
 def callSonarqube() {
     new Sonarqube().call()
 }
+def Dependency() {
+    new Dependency().call()
+}
 def CredScanning() {
     new CredScanning().call()
 }
