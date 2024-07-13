@@ -1,6 +1,6 @@
 import org.java.Checkout
-import org.java.CodeCompilation
-import org.java.sonarqube
+import org.java.CredScanning
+
 
 def checkoutgit(String gitUrl, String branch = 'main') {
     new Checkout().call(gitUrl, branch)
