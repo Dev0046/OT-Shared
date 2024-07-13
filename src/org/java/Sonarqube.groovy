@@ -4,13 +4,6 @@ def call() {
     def scannerHome = tool name: 'sonar', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
     withSonarQubeEnv('sonar') {
         sh """
-        # Install npm dependencies
-        npm install
-        
-        # Run any necessary build commands (if applicable)
-        npm run build
-
-        # Execute SonarQube scanner to analyze your code
         ${scannerHome}/bin/sonar-scanner \
         -Dsonar.projectKey=frontend 
        -Dsonar.sources=. 
