@@ -6,6 +6,7 @@ pipeline {
     environment {
         SONARQUBE_TOKEN = credentials('SONARQUBE_TOKEN') // Replace with your credential ID
     }
+    
     stages {
         stage('git checkout') {
             steps {
@@ -19,6 +20,14 @@ pipeline {
             steps {
                 script {
                     frontend.callSonarqube()
+                }
+            }
+        }
+        
+        stage('Dependency Scanning') {
+            steps {
+                script {
+                    frontend.Dependency()
                 }
             }
         }
