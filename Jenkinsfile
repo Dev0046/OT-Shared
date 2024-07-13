@@ -3,10 +3,6 @@
 pipeline {
     agent any
 
-    environment {
-        SONARQUBE_TOKEN = credentials('SONARQUBE_TOKEN') // Replace with your credential ID
-    }
-    
     stages {
         stage('git checkout') {
             steps {
