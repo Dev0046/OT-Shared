@@ -7,14 +7,14 @@ pipeline {
         stage('git checkout') {
             steps {
                 script {
-                    frontend.checkoutgit('https://github.com/Dev0046/salary-api.git', 'main')
+                    frontend.checkoutgit('https://github.com/Dev0046/frontend.git', 'main')
                 }
             }
         }
-        stage('Hello world') {
+        stage('CredScanning') {
             steps {
                 script {
-                    frontend.callCodeCompilation()
+                    frontend.CredScanning()
                 }
             }
         }
