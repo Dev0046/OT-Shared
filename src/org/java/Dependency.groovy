@@ -4,5 +4,6 @@ def call() {
     // Using triple quotes for multi-line shell script
     sh '''
        trivy repo https://github.com/OT-MICROSERVICES/frontend.git --format json -o trivy-license-report.json
+        archiveArtifacts artifacts: 'trivy-license-report.json', allowEmptyArchive: true
     '''
 }
