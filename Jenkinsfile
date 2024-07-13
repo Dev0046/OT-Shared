@@ -15,7 +15,7 @@ pipeline {
         stage('Sonarqube') {
             steps {
                 script {
-                    frontend.callsonarqube()
+                    frontend.callSonarqube()
                 }
             }
         }
