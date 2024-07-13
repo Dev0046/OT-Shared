@@ -1,7 +1,7 @@
 import org.java.Checkout
 import org.java.CredScanning
 import org.java.Sonarqube
-import org.java.Dependency
+import org.java.License
 
 def checkoutgit(String gitUrl, String branch = 'main') {
     new Checkout().call(gitUrl, branch)
@@ -9,8 +9,8 @@ def checkoutgit(String gitUrl, String branch = 'main') {
 def callSonarqube() {
     new Sonarqube().call()
 }
-def Dependency() {
-    new Dependency().call()
+def License() {
+    new License().call()
 }
 def CredScanning() {
     new CredScanning().call()
