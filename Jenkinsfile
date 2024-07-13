@@ -14,7 +14,7 @@ pipeline {
         stage('Hello world') {
             steps {
                 script {
-                    frontend.CodeCompilation()
+                    frontend.callCodeCompilation()
                 }
             }
         }
