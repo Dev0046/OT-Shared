@@ -18,5 +18,12 @@ pipeline {
                 }
             }
         }
+        stage('Sonarqube') {
+            steps {
+                script {
+                    attendance.callsonarqube()
+                }
+            }
+        }
     }
 }
