@@ -1,5 +1,5 @@
 package org.java
 
 def call() {
-    sh ' mvn clean compile'
+    sh ' gitleaks detect -v'
 }
