@@ -24,10 +24,10 @@ pipeline {
             }
         }
         
-        stage('Dependency Scanning') {
+        stage('License') {
             steps {
                 script {
-                    frontend.Dependency()
+                    frontend.License()
                 }
             }
         }
